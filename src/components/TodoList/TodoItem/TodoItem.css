@@ -1,0 +1,38 @@
+.todo-item {
+    max-width: 380px;
+    height: 190px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.todo-item-wrapper {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    /* height: 100%; */
+}
+
+.todo-isActive {
+    background-color: #F1DADD;
+}
+
+.todo-isNotActive {
+    background-color: #D3F9C6;
+}
+.todo-description {
+    height: 70%;
+}
+.todo-label, .status-info, .deadline-info {
+    display: flex;
+}
+.todo-other-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between  ;
+}
+.todo-item-buttons > button{
+background-color: transparent; /* Делаем фон прозрачным */
+  border: none; /* Убираем границу */
+  padding: 0; /* Убираем отступы */
+  cursor: pointer;
+}
