@@ -1,13 +1,16 @@
 {
   "name": "todo-app",
   "private": true,
+  "homepage": "https://saptibi.github.io/todo-app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "mobx": "^6.13.1",
