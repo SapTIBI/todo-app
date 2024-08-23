@@ -1,6 +1,6 @@
 .todo-item {
     max-width: 380px;
-    height: 190px;
+    max-height: 190px;
     border-radius: 10px;
     border: 2px solid black;
 }

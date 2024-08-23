@@ -28,7 +28,9 @@ const TodoItem: React.FC<TodoItemProps> = observer(({ data, onDelete, onToggleSt
         </div>
         <div className="todo-description">
           <h4>доп.описание: </h4>
-          {data.description}
+          <div>
+            {data.description}
+          </div>
         </div>
         <div className="todo-other-info">
           <div className="other-info">
