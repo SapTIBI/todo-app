@@ -2,6 +2,9 @@
     background-color: #3F3C3C;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    max-height: 100px;
+    height: 20vw;
+    margin-top: auto;
 }
 .footer-wrapper {
     padding: 20px 40px 20px 40px;
