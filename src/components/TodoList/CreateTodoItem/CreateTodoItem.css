@@ -17,12 +17,14 @@
     background-color: #D3F9C6;
     border: 1px solid #000000;
     border-radius: 6px;
+    min-width: 300px;
+    max-width: 400px;
     width: 30%;
 }
 .modal-content {
-    padding: 10px;
+    padding-bottom: 10px;
     margin: 0 auto;
-    width: 400px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,6 +63,7 @@
     width: 90%;
     display: flex;
     flex-direction: column;
+    font-size: clamp(10px, 1.2vw + 6px, 14px);
 }
 
 
@@ -92,9 +95,8 @@ cursor: pointer;
 .title-input,.date-input, .description-textarea {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    font-size: 1.0rem;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
+    padding: clamp(0.5rem, 1vw + 0.5rem, 1.5rem); 
     border-radius: 0.2rem;
     background-color: rgb(255, 255, 255);
     border: none;
@@ -102,6 +104,7 @@ cursor: pointer;
     display: block;
     border-bottom: 0.3rem solid transparent;
     transition: all 0.3s;
+    font-size: clamp(10px, 1.2vw + 6px, 14px);
   }
 
 .data-date, .data-title, .data-description  {

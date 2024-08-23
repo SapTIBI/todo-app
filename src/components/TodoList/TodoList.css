@@ -2,6 +2,7 @@
 .todo-content {
     padding-top: 30px;
     margin: 0 auto;
+    min-width: 300px;
     width: 60%;
     height: 100%;
     display: flex;
@@ -23,6 +24,8 @@
     row-gap: 10px;
 }
 .createNewBtn {
+    min-width: 80px;
+    max-width: 60%;
     appearance: none;
     background-color: #2ea44f;
     border: 1px solid rgba(27, 31, 35, .15);
@@ -33,7 +36,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-size: 14px;
+    font-size: clamp(10px, 1.4vw + 6px, 14px);
     font-weight: 600;
     line-height: 20px;
     padding: 6px 16px;
@@ -48,6 +51,7 @@
 }
 .create-new-todo {
     height: 30%;
+    width: 100%;
 }
 
 .isActive-filter {
@@ -69,4 +73,57 @@
     width: 100%;
     max-height: 60px; /* Максимальная высота контейнера */
     overflow-x: auto;
+}
+
+.view-mode-menu > h4 {
+    
+    font-size: clamp(10px, 1.4vw + 6px, 14px);
+}
+.view-mode-wrapper {
+    display: flex;
+    flex-direction:row;
+    max-width: 60%;
+    gap: 5px;
+}
+@media (max-width: 875px) { /* Измените 768px на желаемую ширину */
+    .view-mode-wrapper {
+        flex-direction: column; /* Изменяем направление на столбец */
+    }
+}
+.mode-btn {
+    width: 25px;
+    height: 25px;
+    appearance: none;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.all {
+    background: linear-gradient(to right, #D3F9C6 50%, #F1DADD 50%);
+}
+.complete {
+    background-color: #D3F9C6;
+}
+.active {
+    background-color: #F1DADD;
+}
+.selected-mode {
+    border: 2px solid #000000;
 }

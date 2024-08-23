@@ -9,6 +9,7 @@
     padding: 20px 40px 20px 40px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .header-logo {
     width: 20%;

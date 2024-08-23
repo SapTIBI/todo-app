@@ -36,3 +36,7 @@ background-color: transparent; /* Делаем фон прозрачным */
   padding: 0; /* Убираем отступы */
   cursor: pointer;
 }
+
+.todo-label, .todo-description, .status-info, .deadline-info {
+    font-size: clamp(10px, 1.2vw + 6px, 14px);
+}

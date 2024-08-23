@@ -10,6 +10,20 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = observer(({ store }) => {
     const [showModal, setShowModal] = useState(false);
+    const [selectedButton, setSelectedButton] = useState(1);
+
+    const handleSelectButton = (btnIndex: number) => {
+      setSelectedButton(btnIndex);
+    }
+
+    const filteredTodoItems = store.todoItems.filter((todoItem) => {
+      if (selectedButton === 3) {
+          return todoItem.isActive;
+      } else if (selectedButton === 2) {
+          return !todoItem.isActive;
+      }
+      return true;
+  });
 
     const handleOpenModal = () => {
         setShowModal(true);
@@ -36,13 +50,24 @@ const TodoList: React.FC<TodoListProps> = observer(({ store }) => {
       <div className="todo-settings-part">
         <div className="create-new-todo">
           <button className="createNewBtn" onClick={handleOpenModal}>
-            Создать новый пост
+            +TODO
           </button>
+        </div>
+        <div className="view-mode-menu">
+          <h4>Показывать:</h4>
+          <div className="view-mode-wrapper">
+            <button onClick={() => {handleSelectButton(1)}} 
+            className={`mode-btn all ${selectedButton === 1 ? 'selected-mode' : ''}`}></button>
+            <button onClick={() => {handleSelectButton(2)}} 
+            className={`mode-btn complete ${selectedButton === 2 ? 'selected-mode' : ''}`}></button>
+            <button onClick={() => {handleSelectButton(3)}} 
+            className={`mode-btn active ${selectedButton === 3 ? 'selected-mode' : ''}`}></button>
+          </div>
         </div>
         {/* Фильтры и другие настройки */}
       </div>
       <div className="todo-list">
-        {store.todoItems.map((todoItem) => (
+        {filteredTodoItems.map((todoItem) => (
           <TodoItem
             key={todoItem.id}
             data={todoItem}
