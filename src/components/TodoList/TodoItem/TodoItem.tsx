@@ -2,6 +2,8 @@ import { observer } from 'mobx-react-lite';
 import './TodoItem.css';
 import {TodoItemData} from '../../../TodoStore';
 
+import deleteImg from '../../../assets/img/delete.png'
+import checkImg from '../../../assets/img/Check.png'
 interface TodoItemProps {
   data: TodoItemData;
   onDelete: (id: number) => void;
@@ -46,11 +48,11 @@ const TodoItem: React.FC<TodoItemProps> = observer(({ data, onDelete, onToggleSt
           <div className="todo-item-buttons">
             {data.isActive && (
               <button onClick={handleComplete}>
-                <img className="todo-item-btn" src="/Check.png" alt="Check" />
+                <img className="todo-item-btn" src={checkImg} alt="Check" />
               </button>
             )}
             <button onClick={handleDelete}>
-              <img className="todo-item-btn" src="/delete.png" />
+              <img className="todo-item-btn" src={deleteImg} />
             </button>
           </div>
         </div>
