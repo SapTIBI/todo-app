@@ -1,0 +1,110 @@
+.modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* z-index: 999; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+.modal-wrapper {
+    background-color: #D3F9C6;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    width: 30%;
+}
+.modal-content {
+    padding: 10px;
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    
+}
+.modal-add-todo {
+    max-width: 200px;
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.modal-data-inputs {
+    gap: 40px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.label-data {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    /* margin-left: -70%;
+    margin-top: -40px; */
+    display: block;
+    /* transition: all 0.3s;
+    transform: translateY(0rem); */
+  }
+  
+.title-input,.date-input, .description-textarea {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.0rem;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 60%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+  }
+
+.data-date, .data-title, .data-description  {
+    display: flex;
+    flex-direction: row;
+  }

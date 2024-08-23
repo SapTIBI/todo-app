@@ -1,21 +1,24 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import TodoList from './components/TodoList/TodoList'
-import TODOList from './data.tsx';
-function App() {
+import { observer } from 'mobx-react-lite';
+import store from './store';
+
+
+
+const App = observer(() => {
   return (
     <>
-      <Header/>
+      <Header />
       <main>
         <div className="wrapper-content">
-          <TodoList todoItemsList={TODOList}/>
+          <TodoList store={store} />
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+});
 
-export default App
+export default App;
