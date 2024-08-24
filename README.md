@@ -1,6 +1,7 @@
 # React pet-project TODO App 
 
-This project is a modern web application built using **React**, **TypeScript**, and **Vite**. It leverages the power of **MobX** for state management, providing a seamless and efficient user experience.
+This project is a modern web application built using **React**, **TypeScript**, and **Vite**. It leverages the power of **MobX** for state management, providing a seamless and efficient user experience.  
+To view the project: https://saptibi.github.io/todo-app/
 
 ## Technologies Used
 
